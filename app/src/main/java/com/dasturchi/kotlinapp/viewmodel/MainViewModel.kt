@@ -10,15 +10,16 @@ import com.dasturchi.kotlinapp.data.MyDatabase
 import com.dasturchi.kotlinapp.data.entity.Note
 import com.dasturchi.kotlinapp.util.DB_NAME
 
-class MainViewModel(app: Application) : AndroidViewModel(app) {
+class MainViewModel(app: Application) : AndroidViewModel(app){
 
-    private var notes = MutableLiveData<List<Note>>()
+    private val notes = MutableLiveData<List<Note>>()
+    private var c = 0;
 
-    fun getNotes() : LiveData<List<Note>>{
+    fun notes() : LiveData<List<Note>>{
         return notes
     }
 
-    fun readNote(){
+    fun readData(){
         val db = Room.databaseBuilder(
             getApplication(),
             MyDatabase::class.java,

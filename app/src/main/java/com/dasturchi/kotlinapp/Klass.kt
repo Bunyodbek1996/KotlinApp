@@ -1,4 +1,4 @@
 package com.dasturchi.kotlinapp
 
-class MyData {
+class Klass {
 }

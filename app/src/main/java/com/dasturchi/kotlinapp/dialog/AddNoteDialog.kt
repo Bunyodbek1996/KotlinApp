@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
-import androidx.lifecycle.ViewModelProviders
 import androidx.room.Room
-import com.dasturchi.kotlinapp.MainActivity
 import com.dasturchi.kotlinapp.R
 import com.dasturchi.kotlinapp.data.MyDatabase
 import com.dasturchi.kotlinapp.data.entity.Note
@@ -44,7 +41,7 @@ class AddNoteDialog(
 
             val note = Note(0,title,content)
             db.getNoteDao().insertNote(note)
-            viewModel.readNote()
+            viewModel.readData()
             this.dismiss()
         }
     }

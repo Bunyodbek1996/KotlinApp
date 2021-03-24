@@ -10,10 +10,11 @@ import com.dasturchi.kotlinapp.data.MyDatabase
 import com.dasturchi.kotlinapp.data.entity.Note
 import com.dasturchi.kotlinapp.util.DB_NAME
 import kotlinx.android.synthetic.main.item_note.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
-class NoteAdapter(
-    private var notes: List<Note>
-) : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
+class NoteAdapter() : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
+    private var notes : List<Note> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteHolder
         = NoteHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_note,parent,false))
@@ -36,8 +37,10 @@ class NoteAdapter(
         }
     }
 
-    fun setNotes(list: List<Note>) {
-        this.notes = list
+    fun setNotes(notes: List<Note>) {
+        Collections.reverse(notes)
+        this.notes = notes
+        notifyDataSetChanged()
     }
 
     class NoteHolder(view: View) : RecyclerView.ViewHolder(view)
