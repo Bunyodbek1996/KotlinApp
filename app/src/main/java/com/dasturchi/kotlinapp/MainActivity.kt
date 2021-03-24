@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Toast.makeText(this, "salom dunyo", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "salom dunyo", Toast.LENGTH_SHORT).show()
 
         viewmodel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
