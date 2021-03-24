@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Toast.makeText(this, "salom dunyo", Toast.LENGTH_SHORT).show()
+
 
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         recyclerNote.apply {
