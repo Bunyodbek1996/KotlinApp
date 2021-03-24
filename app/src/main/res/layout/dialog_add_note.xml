@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#B9000000"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Add note"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_title_24"
+        android:hint="Title"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        style="@style/TextInput"
+        android:layout_marginRight="20dp"
+        app:startIconTint="@color/white"
+        android:layout_marginLeft="20dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:textCursorDrawable="@drawable/cursor"
+            android:id="@+id/edtTitleNote"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_baseline_event_note_24"
+        android:hint="Content"
+        android:textColorHint="@color/white"
+        style="@style/TextInput"
+        android:layout_marginRight="20dp"
+        app:startIconTint="@color/white"
+        app:hintTextColor="@color/white"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:layout_height="match_parent"
+            android:textCursorDrawable="@drawable/cursor"
+            android:id="@+id/edtContentNote"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Add"
+        android:backgroundTint="#fff"
+        android:textColor="#2C2C2C"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
