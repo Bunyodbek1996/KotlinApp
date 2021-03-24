@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Toast.makeText(this, "salom dunyo", Toast.LENGTH_SHORT).show()
+
         viewmodel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
         viewmodel.getNotes().observe(this, Observer {
